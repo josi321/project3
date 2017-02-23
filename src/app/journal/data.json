@@ -1,0 +1,30 @@
+{
+	"count":3,
+	"0":{
+		"ID":16,
+		"title":"nike test post",
+		"content":"some test post",
+		"categories":["awesome","kitty","Uncategorized"],
+		"image":"http:\/\/portal.helloitscody.com\/inhabitent\/wp-content\/uploads\/2017\/02\/Nike-Logo-Free-PNG-Image-13.png",
+		"date":"February 15, 2017",
+		"author":""
+		},
+	"1":{
+		"ID":6,
+		"title":"nike test post",
+		"content":"some test post",
+		"categories":["awesome","kitty","Uncategorized"],
+		"image":"http:\/\/portal.helloitscody.com\/inhabitent\/wp-content\/uploads\/2017\/02\/Nike-Logo-Free-PNG-Image-12.png",
+		"date":"February 14, 2017",
+		"author":""
+		},
+	"2":{
+		"ID":1,
+		"title":"Hello world!",
+		"content":"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+		"categories":["Uncategorized"],
+		"image":false,
+		"date":"February 14, 2017",
+		"author":"camp_admin"
+		}
+}

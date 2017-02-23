@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  padding: 7rem 0;
+  font-family: 'Novovento Sans Web', sans-serif;
+  font-size: 4rem;
+  color: #404040;
+}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+}
+
+.square {
+   flex: 1 0 50%;
+   width: 95%;
+   border: 1px solid #e1e1e1;
+   border-top: 5px solid #e1e1e1;
+   position: relative;
+   justify-content: space-between;
+   padding:0 2rem;
+}
+
+.square img {
+  max-width: 100%;
+  max-width:100%;
+}

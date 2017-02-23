@@ -1,0 +1,124 @@
+h1 {
+  text-align: center;
+  padding: 7rem 0;
+  font-family: 'Merriweather', serif;
+  font-size: 4rem;
+  color: #404040;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.square, .large-square, .rectangle {
+  border: 4px solid white;
+  position: relative;
+}
+
+.square {
+  flex:1 0 50%;
+  max-width: 25%;
+  padding-top: 2rem;
+}
+
+.large-square {
+  flex:2 0 50%;
+  min-width: 60rem;
+}
+
+.rectangle {
+  flex: 2 0 100%;
+  max-width: 50%;
+}
+
+.text {
+  font-family: 'Merriweather Web', serif;
+  font-weight: 400;
+  margin-top: 24px;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1.75;
+  margin: 1.5rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 1rem;
+  transform: translate(30%, 400%);
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+#canoe{
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+  url("images/adventure-photos/canoe-girl.jpg") center no-repeat;
+  min-height: 60vh;
+}
+
+#beach {
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+  url("images/adventure-photos/beach-bonfire.jpg") center no-repeat;
+  min-height: 30vh;
+}
+
+#mountain-hikers {
+   background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+   url("images/adventure-photos/mountain-hikers.jpg") center bottom;
+   min-height: 30vh;
+}
+
+#star-gazing {
+  background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
+  url("images/adventure-photos/night-sky.jpg") center bottom;
+  min-height: 30vh;
+}
+
+.adventure {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 60rem;
+  height: 100%;
+  /*width: 100%;*/
+}
+
+.single{
+  align-self: flex-start;
+}
+
+.multi {
+  align-self: flex-end;
+}
+
+.bottom-btn {
+  margin-left:16rem;
+  margin-bottom: 8rem;
+  padding: 5rem 0;
+}
+.green-btn {
+  background: #19625d;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  border: none;
+  line-height: 1;
+  padding: 1rem;
+  font-size:1.7rem;
+
+}

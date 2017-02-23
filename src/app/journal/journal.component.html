@@ -1,0 +1,14 @@
+<h1>INHABITENT JOURNAL</h1>
+
+<div class=" owl-carousel owl-theme container">
+<div *ngFor = "let journal of journalEntries">
+  <div class="square">
+        <img src={{journal.image}}>
+        <div>
+            <h3>{{journal.date}} / {{journal.categories.count}} comments</h3>
+            <h2>{{journal.title}}</h2>
+            <button>READ ENTRY</button>
+        </div>
+    </div>
+  </div>
+</div>
