@@ -15,6 +15,7 @@ import { JournalComponent } from './journal/journal.component';
 import { Journal } from './journal/journal';
 import { JournalService } from './journal/journal.service';
 import { AdventureComponent } from './adventure/adventure.component';
+import { NewEntryComponent } from './new-entry/new-entry.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AdventureComponent } from './adventure/adventure.component';
     ShopComponent,
     JournalComponent,
     AdventureComponent,
+    NewEntryComponent,
 
   ],
   imports: [

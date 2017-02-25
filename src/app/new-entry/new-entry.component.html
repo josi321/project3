@@ -1,0 +1,56 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Submit a new article</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="John Doe">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" [(ngModel)]="model.category" name="category">
+      </div> -->
+
+      <div class="form-group">
+       <label for="category">Category</label>
+       <select class="form-control" id="category"
+               required
+               [(ngModel)]="model.category" name="category"
+               #category="ngModel">
+         <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+       </select>
+       <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+         Category is required
+       </div>
+     </div>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="model.title" name="title" #title="ngModel" placeholder="A creative title">
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+          Title is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input id="image" type="text" name="image" placeholder="http://www.google.ca/cute-dog.jpg"
+  	  	[(ngModel)]="entry.image">
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content</label>
+        <input type="text" class="form-control" id="content" required [(ngModel)]="model.content" name="content" #content="ngModel">
+        <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
+          Content is required
+        </div>
+      </div>
+
+      <button (click)="submitEntry()" type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
+      <button (click)="reset()">Cancel</button>
+    </form>
+  </div>
+</div>
