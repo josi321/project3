@@ -48,8 +48,10 @@ export class NewEntryComponent implements OnInit {
     this.journalService.postEntry(parameters);
   }
 
-  Back(): void {
+  Back(){
     this.location.back();
   }
+
+
 
 }
