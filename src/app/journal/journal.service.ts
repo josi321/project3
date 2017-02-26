@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/toPromise'
+import 'rxjs/add/operator/toPromise';
 
 // model data
 import { Journal } from './journal';
@@ -48,6 +48,8 @@ export class JournalService {
           let bKeys = Object.keys(b).sort();
           return JSON.stringify(aKeys).toLowerCase() === JSON.stringify(bKeys).toLowerCase();
         };
+
+        // new instance of Journal called keyToCompare
         let keyToCompare = new Journal();
         console.log(keyToCompare);
         for (let prop in returnedResponse) {
@@ -87,6 +89,12 @@ export class JournalService {
   }
 
   //selected journal entry
+
+//   getHero(id: number): Promise<Hero> {
+//   return this.getHeroes()
+//              .then(heroes => heroes.find(hero => hero.id === id));
+// }
+
   getPost(ID: number): Promise<Journal> {
 
     return this.http.get(this.journalUrl)

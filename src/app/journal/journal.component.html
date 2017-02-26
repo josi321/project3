@@ -8,9 +8,13 @@
         <div>
             <h3>{{journal.date}} / {{journal.categories.count}} comments</h3>
             <h2>{{journal.title}}</h2>
-            <button>READ ENTRY</button>
+            <button><a routerLink="/read/:ID">READ ENTRY</a></button>
         </div>
     </div>
   </div>
+
+<div>
+  <button routerLink="/new-entry">NEW POST</button>
+</div>
 
 </div>

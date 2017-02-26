@@ -1,0 +1,31 @@
+<div *ngIf="journalPost">
+  <div>
+    <h1>{{journalPost.title}}</h1>
+    <img src="{{journalPost.image}}" alt="journalImage" />
+    <p>{{journalPost.date}} / comments</p>
+  </div>
+
+  <div>
+    <div>
+      <p>
+        <label>id: </label>
+        {{journalPost.ID}}
+      </p>
+      <p>
+        {{journalPost.content}}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div *ngIf="hero">
+  <h2>{{hero.name}} details!</h2>
+  <div>
+    <label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div> -->

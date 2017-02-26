@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -16,6 +16,7 @@ import { Journal } from './journal/journal';
 import { JournalService } from './journal/journal.service';
 import { AdventureComponent } from './adventure/adventure.component';
 import { NewEntryComponent } from './new-entry/new-entry.component';
+import { ReadComponent } from './read/read.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NewEntryComponent } from './new-entry/new-entry.component';
     JournalComponent,
     AdventureComponent,
     NewEntryComponent,
+    ReadComponent,
 
   ],
   imports: [
