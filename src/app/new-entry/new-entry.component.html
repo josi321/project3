@@ -5,7 +5,7 @@
     <form (ngSubmit)="SubmitJournal()" #apiForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="John Doe">
+        <input type="text" class="form-control" id="name" required [(ngModel)]="entry.name" name="name" #name="ngModel" placeholder="John Doe">
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           Name is required
         </div>
@@ -20,21 +20,21 @@
           <label for="category">Category</label>
           <select class="form-control"  id="category"
                   required
-                  [(ngModel)]="model.category" name="category">
+                  [(ngModel)]="entry.category" name="category">
             <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
           </select>
         </div>
 
       <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" required [(ngModel)]="model.title" name="title" #title="ngModel" placeholder="A creative title">
+        <input type="text" class="form-control" id="title" required [(ngModel)]="entry.title" name="title" #title="ngModel" placeholder="A creative title">
         <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
           Title is required
         </div>
       </div>
 
       <div class="form-group">
-        <input type="text" class="form-control" id="image" required [(ngModel)]="model.content" name="image" #content="ngModel" placeholder="Image Link required....example: www.google.ca/cute-dog.jpg">
+        <input type="text" class="form-control" id="image" required [(ngModel)]="entry.image" name="image" #content="ngModel" placeholder="Image Link required....example: www.google.ca/cute-dog.jpg">
         <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
           Image is required
         </div>
@@ -42,13 +42,13 @@
 
       <div class="form-group">
         <label for="content">Content</label>
-        <input type="text" class="form-control" id="content" required [(ngModel)]="model.content" name="content" #content="ngModel">
+        <input type="text" class="form-control" id="content" required [(ngModel)]="entry.content" name="content" #content="ngModel">
         <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
           Content is required
         </div>
       </div>
 
-      <button (ngSubmit)="SubmitJournal() "(click)="SubmitJournal()" type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
+      <button (click)="SubmitJournal()" type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
       <button (click)="Back()">Cancel</button>
     </form>
   </div>
