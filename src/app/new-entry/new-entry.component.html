@@ -2,7 +2,7 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Submit a new article</h1>
-    <form (ngSubmit)="SubmitJournal()" #apiForm="ngForm">
+    <form #entryForm="ngForm" id="apiForm" (ngSubmit)="SubmitJournal()">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="entry.name" name="name" #name="ngModel" placeholder="John Doe">
@@ -34,7 +34,8 @@
       </div>
 
       <div class="form-group">
-        <input type="text" class="form-control" id="image" required [(ngModel)]="entry.image" name="image" #content="ngModel" placeholder="Image Link required....example: www.google.ca/cute-dog.jpg">
+        <label for="name">Image Link</label>
+        <input type="text" class="form-control" id="image" required [(ngModel)]="entry.image" name="image" #content="ngModel" placeholder="www.google.ca/cute-dog.jpg">
         <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
           Image is required
         </div>

@@ -48,7 +48,7 @@ export class NewEntryComponent implements OnInit {
 
   SubmitJournal() {
     this.params = '[' + JSON.stringify(this.entry) + ']';
-    const parameters = JSON.stringify($('#apiForm').serializeArray());
+    let parameters = JSON.stringify($('#apiForm').serializeArray());
     console.log(parameters);
     this.journalService.postEntry(parameters);
   }
