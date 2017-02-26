@@ -1,7 +1,8 @@
+<br /><br /><br /><br />
 <div class="container">
   <div [hidden]="submitted">
     <h1>Submit a new article</h1>
-    <form (ngSubmit)="onSubmit()" #apiForm="ngForm">
+    <form (ngSubmit)="SubmitJournal()" #apiForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="John Doe">
@@ -16,17 +17,13 @@
       </div> -->
 
       <div class="form-group">
-       <label for="category">Category</label>
-       <select class="form-control" id="category"
-               required
-               [(ngModel)]="model.category" name="category"
-               #category="ngModel">
-         <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
-       </select>
-       <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
-         Category is required
-       </div>
-     </div>
+          <label for="category">Category</label>
+          <select class="form-control"  id="category"
+                  required
+                  [(ngModel)]="model.category" name="category">
+            <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+          </select>
+        </div>
 
       <div class="form-group">
         <label for="title">Title</label>
@@ -37,8 +34,10 @@
       </div>
 
       <div class="form-group">
-        <input id="image" type="text" name="image" placeholder="http://www.google.ca/cute-dog.jpg"
-  	  	[(ngModel)]="entry.image">
+        <input type="text" class="form-control" id="image" required [(ngModel)]="model.content" name="image" #content="ngModel" placeholder="Image Link required....example: www.google.ca/cute-dog.jpg">
+        <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
+          Image is required
+        </div>
       </div>
 
       <div class="form-group">
@@ -49,8 +48,10 @@
         </div>
       </div>
 
-      <button (click)="submitEntry()" type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
-      <button (click)="reset()">Cancel</button>
+      <button (ngSubmit)="SubmitJournal() "(click)="SubmitJournal()" type="submit" class="btn btn-success" [disabled]="!Form.form.valid">Submit</button>
+      <button (click)="Back()">Cancel</button>
     </form>
   </div>
 </div>
+
+<br /><br /><br /><br />

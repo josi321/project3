@@ -25,11 +25,16 @@ export class NewEntryComponent implements OnInit {
   private location: Location;
   private router: Router;
 
-  // model = new newEntry('', '', '');
-  // showFormControls(form: any) {
-  //     return form && form.controls['name'] &&
-  //     form.controls['name'].value;
-  // }
+  categories= ['Camping Food', 'Camping Activities', 'Camping Equipment', 'Other'];
+  model = new JournalEntry;
+  showFormControls(form: any) {
+      return form && form.controls['name'] &&
+      form.controls['name'].value;
+  }
+
+//   reset() {
+//     this.form.reset();
+// }
 
   ngOnInit() {
     // make the new entry be a new instance of JournalEntry
@@ -38,9 +43,13 @@ export class NewEntryComponent implements OnInit {
 
   SubmitJournal() {
     this.params = '[' + JSON.stringify(this.entry) + ']';
-    // const parameters = JSON.stringify($('form').serializeArray());
+    const parameters = JSON.stringify($('#apiForm').serializeArray());
     // console.log(parameters);
-    this.journalService.postEntry(this.params);
+    this.journalService.postEntry(parameters);
+  }
+
+  Back(): void {
+    this.location.back();
   }
 
 }
