@@ -1,7 +1,7 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Submit a new article</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #apiForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="John Doe">

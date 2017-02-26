@@ -32,10 +32,13 @@ export class ReadComponent implements OnInit {
   // }
 
   ngOnInit(): void {
+    console.log(this.journalPost);
+    console.log(Journal);
     this.route.params
       .switchMap((params: Params) => this.journalService.getPost(+params['id']))
       .subscribe(journal => this.journalPost = journal);
   }
+
 
   goBack(): void {
   this.location.back();

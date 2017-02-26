@@ -53,7 +53,7 @@ export class JournalComponent implements OnInit {
 
   gotoDetail(journal: Journal): void {
     this.selectedJournal = journal;
-    // this.router.navigate(['/read', this.selectedJournal.ID]);
+    // this.router.navigate(['/read/:ID', this.selectedJournal.ID]);
   }
 
 
