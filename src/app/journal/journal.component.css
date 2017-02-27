@@ -15,7 +15,7 @@ h1 {
 
 .owl-carousel .border img {
   max-width: 100%;
-  max-height: 40vh;
+  height: 280px;
   border-bottom: 5px solid #e1e1e1;
   align-self: center;
 }
