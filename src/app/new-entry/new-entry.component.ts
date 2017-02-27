@@ -7,7 +7,7 @@ import { JournalComponent } from '../journal/journal.component';
 import { JournalService } from '../journal/journal.service';
 import { JournalEntry } from './newEntry';
 
-var $: any;
+declare var $: any;
 
 @Component({
   selector: 'app-new-entry',
@@ -28,12 +28,13 @@ export class NewEntryComponent implements OnInit {
 ) { }
 
 
-  categories = ['Camping Food', 'Camping Activities', 'Camping Equipment', 'Other'];
+  // categories = ['Camping Food', 'Camping Activities', 'Camping Equipment', 'Other'];
   // model = new JournalEntry;
   showFormControls(form: any) {
     return form && form.controls['name'] &&
       form.controls['name'].value;
   }
+
 
   //   reset() {
   //     this.form.reset();
@@ -51,6 +52,7 @@ export class NewEntryComponent implements OnInit {
     let parameters = JSON.stringify($('#apiForm').serializeArray());
     console.log(parameters);
     this.journalService.postEntry(parameters);
+
   }
 
   Back() {
