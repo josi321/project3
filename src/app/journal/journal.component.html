@@ -1,8 +1,12 @@
 <h1>INHABITENT JOURNAL</h1>
 
+<div class="container">
+
 <div class="owl-carousel owl-theme">
   <div *ngFor = "let journal of journalEntries" [class.selected]="journal === selectedJournal" (click)="onSelect(journal)" [routerLink]="['/read', journal.ID]">
- <div>
+<div class="spacing">
+
+ <div class= "border">
        <img src={{journal.image}}>
        <div>
            <h3>{{journal.date}} / {{journal.categories.count}} comments</h3>
@@ -13,7 +17,10 @@
  </div>
 </div>
 
+</div>
 
-<div>
-  <button routerLink="/new-entry">NEW POST</button>
+</div>
+
+<div class="container">
+  <button routerLink="/new-entry">SUBMIT A NEW POST</button>
 </div>

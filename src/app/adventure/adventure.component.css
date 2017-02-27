@@ -17,6 +17,7 @@ h1 {
 .container2 {
   display: flex;
   flex-wrap:wrap;
+  padding-top: 0.8rem;
 }
 
 .square, .large-square, .rectangle {
@@ -67,7 +68,7 @@ h1 {
 #canoe{
   background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
   url("images/adventure-photos/canoe-girl.jpg") center no-repeat;
-  min-height: 60vh;
+  min-height: 61.5vh;
 }
 
 #beach {

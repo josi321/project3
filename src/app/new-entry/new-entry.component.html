@@ -2,7 +2,7 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Submit a new article</h1>
-    <form #entryForm="ngForm" id="apiForm" (ngSubmit)="SubmitJournal()">
+    <form  #entryForm="ngForm" id="apiForm" (ngSubmit)="SubmitJournal()">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="entry.name" name="name" #name="ngModel" placeholder="John Doe">
@@ -20,7 +20,7 @@
           <label for="category">Category</label>
           <select class="form-control"  id="category"
                   required
-                  [(ngModel)]="entry.category" name="category">
+                  [(ngModel)]="entry.categories" name="category">
             <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
           </select>
         </div>
