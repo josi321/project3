@@ -1,0 +1,48 @@
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container1{
+  align-self: flex-start;
+}
+
+.title {
+  background-color: #248A83;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.date {
+  background-color: #248A83;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.container2{
+  width:30%
+/*padding-left: 25rem;*/
+}
+.contact {
+  align-self: flex-end;
+  border-left: 1px solid #e1e1e1;
+  margin-left: 50%;
+}
+
+.text {
+  padding-left: 0.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.archive {
+  color: #248A83;
+  text-decoration: none;
+}

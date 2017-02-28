@@ -1,12 +1,10 @@
 <div *ngIf="journalPost">
-  <div>
-    <h1>{{journalPost.title}}</h1>
-    <img src="{{journalPost.image}}" alt="journalImage" />
-    <p>{{journalPost.date}} / comments</p>
-  </div>
-
-  <div>
-    <div>
+<div class="container">
+  <div class="container1">
+    <div class="journals">
+      <h1 class="title">{{journalPost.title}}</h1>
+      <img src="{{journalPost.image}}" alt="journalImage" />
+      <p class="date">{{journalPost.date}} / comments</p>
       <p>
         <label>id: </label>
         {{journalPost.ID}}
@@ -16,8 +14,19 @@
       </p>
     </div>
   </div>
-</div>
 
+
+  <!-- <div>
+    <div>
+      <p>
+        <label>id: </label>
+        {{journalPost.ID}}
+      </p>
+      <p>
+        {{journalPost.content}}
+      </p>
+    </div>
+  </div> -->
 
 <!-- <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
@@ -29,3 +38,40 @@
   </div>
   <button (click)="goBack()">Back</button>
 </div> -->
+<div class="container2">
+  <div class="contact">
+    <h2>CONTACT INFO</h2>
+    <p class="text">
+      <i class="fa fa-envelope"></i><a href="mailto:info@inhabitent.com">     info@inhabitent.com</a>
+    </p>
+    <p class="text">
+      <i class="fa fa-map-marker"></i> 1490 W Broadway <br />     Vancouver, BC V6H1H5
+    </p>
+
+    <br /><br />
+
+    <h2>BUSINESS HOURS</h2>
+    <p>
+      <span class="bold">Monday-Firday:</span> 9am to 5pm
+    </p>
+    <p>
+      <span class="bold">Saturday:</span> 10am to 2pm
+    </p>
+    <p>
+      <span class="bold">Sunday:</span> Closed
+    </p>
+    <br /><br /><br />
+
+    <h2>ARCHIVES</h2>
+    <p>
+      <a class="archive" href="#" [routerLink]="['/']">April 2016</a>
+    </p>
+    <p>
+      <a class="archive" href="#" [routerLink]="['/']">March 2016</a>
+    </p>
+
+  </div>
+</div>
+
+</div>
+</div>
